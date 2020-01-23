@@ -14,28 +14,40 @@
   <div class="container-fluid">
     <header class="row no-gutters" id="header">
       <div class="col-1 header-icon"></div>
-      <div class="col-3 header-search"></div>
-      <div class="col-4 header-nav"></div>
-      <div class="col-2.offset-2 header-right"></div>
+      <div class="col-2 header-search">
+        <input id="search"type="search" placeholder="Search or jump to...">
+      </div>
+      <div class="col-3 header-nav">
+        <a href="#">Pull requests</a>
+        <a href="#">Issues</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Explore</a>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-2 header-right"></div>
     </header>
     <section class="row no-gutters" id="body">
-      <aside class="col-2.offset-1" id="bio">
+      <aside class="col-2" id="bio">
         <div class="row">
-          <div class="col images"></div>
+          <div class="col image"></div>
         </div>
         <div class="row no-gutters">
           <div class="col username">
-
+            <h1>Luke Russell</h1>
+            <h2>TheLukeRussell</h2>
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col edit-profile">
-
+            <button type="button">Edit profile</button>
           </div>
         </div>
         <div class="row no-gutters">
+          <div class="col location">Greenville, SC</div>
+        </div>
+        <div class="row no-gutters">
           <div class="col orgs">
-
+            <h3>Organizatons</h3>
           </div>
         </div>
       </aside>
@@ -51,33 +63,93 @@
             <a href="#">Following</a>
           </div>
         </div>
-        <div class="row no-gutters">
-          <div class="col-8 search-bar"></div>
-          <div class="col-1 type-button"></div>
-          <div class="col-2 language-buton"></div>
-          <div class="col-1 new-button"></div>
+        <div class="row no-gutters search-bar">
+          <div class="col-8">
+            <input type="search" placeholder="Find a repository...">
+          </div>
+          <div class="col-1 type-button">
+            <button type="button"><span>Type:</span> All</button>
+          </div>
+          <div class="col-2 language-buton">
+            <button type="button"><span>Language:</span> All</button>
+          </div>
+          <div class="col-1 new-button">
+            <button type="button">New</button>
+          </div>
         </div>
-        <div class="row repo-list">
+        <div class="row no-gutters repo-list">
         </div>
-        </main>
+      </main>
     </section>
     <footer class="row no-gutters" id="footer">
-      <div class="col-10.offset-1">
-        <div class="row no-gutters">
-          <div class="col-5 left-footer">
+          <div class="col-4 left-footer">
+              <a>© 2020 GitHub, Inc</a>
+              <a href="#">Terms</a>
+              <a href="#">Privacy</a>
+              <a href="#">Security</a>
+              <a href="#">Status</a>
+              <a href="#">Help</a>
           </div>
-          <div class="col-2 github-footer-icon">
+          <div class="col-1 github-footer-icon">
           </div>
-          <div class="col-5 right-footer">
-          </div>
+          <div class="col-4 right-footer">
+              <a href="#">Contact GitHub</a>
+              <a href="#">Pricing</a>
+              <a href="#">API</a>
+              <a href="#">Training</a>
+              <a href="#">Blog</a>
+              <a href="#">About</a>
+            </div>
+    </footer>
+
+<script id="bioTemplate" type="text/x-handlebars-template">
+  {{#bioInfo}}
+  <section class="row no-gutters" id="body">
+    <aside class="col-2" id="bio">
+      <div class="row">
+        <div class="col image">{{ avatar }}</div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col username">
+          <h1>{{ name }}</h1>
+          <h2>{{ login }}</h2>
         </div>
       </div>
-    </footer>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/config.js"></script>
-  <script src="js/main.js"></script>
+      <div class="row no-gutters">
+        <div class="col edit-profile">
+          <button type="button">Edit profile</button>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col location">{{ location }}</div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col orgs">
+          <h3>{{ organizatons_url }}</h3>
+        </div>
+      </div>
+    </aside>
+  </section>
+{{/bioInfo}}
+</script>
+
+
+
+
+
+
+
+
+
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  <script src="js/config.js">
+  </script>
+  <script src="js/main.js">
+  </script>
 </body>
 
 </html>

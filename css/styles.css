@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  margin: 0 auto;
+}
+* button {
+  border-radius: 4px;
 }
 
 img {
@@ -7,27 +11,64 @@ img {
 }
 
 .container-fluid {
-  height: 100%;
+  padding: 0;
 }
 
 #header {
-  height: 100px;
+  height: 5%;
+  padding: 15px;
 }
-
-#main {
-  height: 100px;
+#header #search {
+  width: 100%;
+  margin: 0;
 }
-
-#bio {
-  height: 100px;
+#header input {
+  border-radius: 4px;
+}
+#header a {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #body {
-  height: 100px;
+  height: 90%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#body #bio h2 {
+  font-weight: 200;
+  color: grey;
+}
+#body #bio h3 {
+  font-size: 16px;
+}
+#body #main a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#body #main input {
+  width: 95%;
+  border-radius: 4px;
+}
+#body #main .repo-nav {
+  padding: 16px 8px;
+}
+#body #main .search-bar {
+  padding: 16px 8px;
+  text-align: center;
 }
 
 #footer {
-  height: 100px;
+  height: 5%;
+  text-align: center;
+  padding: 40px;
+}
+#footer a {
+  font-size: 10px;
+}
+#footer a:not(:last-child) {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
