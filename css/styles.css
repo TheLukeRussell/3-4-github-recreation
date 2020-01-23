@@ -2,4 +2,32 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+#header {
+  height: 100px;
+}
+
+#main {
+  height: 100px;
+}
+
+#bio {
+  height: 100px;
+}
+
+#body {
+  height: 100px;
+}
+
+#footer {
+  height: 100px;
+}
+
 /*# sourceMappingURL=styles.css.map */
