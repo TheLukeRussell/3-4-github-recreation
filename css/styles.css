@@ -11,10 +11,6 @@ img {
   padding: 0;
 }
 
-div.col.header-nav {
-  margin-left: 15px;
-}
-
 #header {
   height: 5%;
   padding: 15px;
@@ -35,7 +31,7 @@ div.col.header-nav {
   text-align: right;
 }
 #header #search {
-  width: 100%;
+  width: 90%;
   margin: 0;
   margin-left: 10px;
 }
@@ -45,7 +41,7 @@ div.col.header-nav {
   border: none;
 }
 #header a {
-  margin-left: 10px;
+  margin-right: 10px;
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -81,6 +77,7 @@ div.col.header-nav {
 #body #bio {
   padding-right: 40px;
   margin: 0;
+  margin-top: 10px;
 }
 #body #bio .row {
   padding: 10px 0px;
@@ -110,10 +107,10 @@ div.col.header-nav {
   padding: 16px 8px;
 }
 #body #main .repo-nav a {
-  margin-left: 0px;
-  margin-right: 30px;
   color: grey;
   text-decoration: none;
+  margin-right: 25px;
+  font-weight: 350;
 }
 #body #main .repo-nav a:hover {
   color: black;
@@ -170,11 +167,8 @@ div.col.header-nav {
 
 #footer {
   height: 5%;
+  padding: 40px 0px;
   text-align: center;
-  padding: 40px;
-}
-#footer a {
-  font-size: 10px;
 }
 #footer a i {
   color: #C7CBD1;
@@ -183,9 +177,10 @@ div.col.header-nav {
 #footer a i:hover {
   color: grey;
 }
-#footer a:not(:last-child) {
+#footer a {
+  font-size: 12px;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */

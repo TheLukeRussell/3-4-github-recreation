@@ -17,7 +17,7 @@
   <div class="container-fluid">
     <header class="row no-gutters" id="header">
       <div><a href="#"><i class="fab fa-github"></i></a></div>
-      <div class="col-2 header-search">
+      <div class="col-3 header-search">
         <input id="search" type="search" placeholder=" Search or jump to...">
       </div>
       <div class="col header-nav">
@@ -65,7 +65,7 @@
         <div class="row no-gutters">
           <div class="col-12 repo-nav">
             <a href="#">Overview</a>
-            <a href="#">Repositores</a>
+            <a href="#">Repositories</a>
             <a href="#">Projects</a>
             <a href="#">Packages</a>
             <a href="#">Stars</a>
@@ -122,7 +122,7 @@
         <a href="#">Status</a>
         <a href="#">Help</a>
       </div>
-      <div class="col-1 github-footer-icon">
+      <div class="col-2 github-footer-icon">
         <a href="#"><i class="fab fa-github"></i></a>
       </div>
       <div class="col-5 right-footer">
@@ -157,6 +157,32 @@
             <div class="col location"><i class="fas fa-map-marker-alt"></i><span>{{location}}</span></div>
           </div>
 
+    </script>
+    <script id="repoTemplate" type="text/x-handlebars-template">
+    <div id="repoList" class="row no-gutters">
+      <div class="col-10">
+        <h3><a href="#">{{name}}</a></h3>
+        <div><span class="repo-lang-color">'color'</span>
+          <span class="repo-lang">{{language}}</span>
+          <span class="update-time">Updated
+            <relative-time datetime="{{updated_at}}" title="{{updated_at}}">65 years ago</relative-time></span>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <button type="button"><i class="fas fa-star"></i> Star</button></div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-12">
+        <div class="commit-stat">
+          <span class="stat-bar">commit stat bar</span>
+        </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
     </script>
 
 
