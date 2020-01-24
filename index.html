@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Your Repositories</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
 
@@ -15,9 +15,10 @@
 
 <body>
   <div class="container-fluid">
-    <header class="row no-gutters" id="header"><div><a href="#"><i class="fab fa-github"></i></a></div>
+    <header class="row no-gutters" id="header">
+      <div><a href="#"><i class="fab fa-github"></i></a></div>
       <div class="col-3 header-search">
-        <input id="search"type="search" placeholder=" Search or jump to...">
+        <input id="search" type="search" placeholder=" Search or jump to...">
       </div>
       <div class="col header-nav">
         <a href="#">Pull requests</a>
@@ -30,35 +31,32 @@
         <a href="#"><i class="fas fa-bell"></i></a>
         <a href="#"><i class="fas fa-plus"></i></a>
       </div>
-    </div>
-    </header>
-    <div class="container">
+  </div>
+  </header>
+  <div class="container">
     <section class="row no-gutters" id="body">
       <aside class="col-2" id="bio">
         <div class="row no-gutters">
           <div class="col-12 image">
-            <img src="https://avatars2.githubusercontent.com/u/56741182?s=460&v=4"
+            <img src="https://avatars2.githubusercontent.com/u/56741182?s=460&v=4" </div> </div> <div class="row no-gutters">
+            <div class="col-12 username">
+              <h1>Luke Russell</h1>
+              <h2>TheLukeRussell</h2>
+            </div>
           </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-12 username">
-            <h1>Luke Russell</h1>
-            <h2>TheLukeRussell</h2>
+          <div class="row no-gutters">
+            <div class="col-12 edit-profile">
+              <button type="button">Edit profile</button>
+            </div>
           </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-12 edit-profile">
-            <button type="button">Edit profile</button>
+          <div class="row no-gutters">
+            <div class="col location">Greenville, SC</div>
           </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col location">Greenville, SC</div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-12 orgs">
-            <h3>Organizatons</h3>
+          <div class="row no-gutters">
+            <div class="col-12 orgs-list">
+              <h3>Organizatons</h3>
+            </div>
           </div>
-        </div>
       </aside>
       <main class="col-9" id="main">
         <div class="row no-gutters">
@@ -86,59 +84,81 @@
             <button id="new-button" type="button">New</button>
           </div>
         </div>
-        <div class="row no-gutters repo-list">
+        <div id="repoList" class="row no-gutters">
+          <div class="col-10">
+            <h3><a href="#">3-1-function-practice</a></h3>
+            <div><span class="repo-lang-color">'color'</span>
+              <span class="repo-lang">'language'</span>
+              <span class="update-time">Updated
+                <relative-time datetime="2020-01-25T20:13:45Z" title="Jan 25, 2020, 1:45 PM EST">an hour ago</relative-time></span>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row no-gutters">
+              <div class="col-12">
+                <button type="button"><i class="fas fa-star"></i> Star</button></div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-12">
+            <div class="commit-stat">
+              <span class="stat-bar">commit stat bar</span>
+            </div>
+            </div>
+          </div>
+          </div>
+
         </div>
       </main>
     </section>
     <footer class="row no-gutters" id="footer">
-          <div class="col-5 left-footer">
-              <a>© 2020 GitHub, Inc</a>
-              <a href="#">Terms</a>
-              <a href="#">Privacy</a>
-              <a href="#">Security</a>
-              <a href="#">Status</a>
-              <a href="#">Help</a>
-          </div>
-          <div class="col-1 github-footer-icon">
-          </div>
-          <div class="col-5 right-footer">
-              <a href="#">Contact GitHub</a>
-              <a href="#">Pricing</a>
-              <a href="#">API</a>
-              <a href="#">Training</a>
-              <a href="#">Blog</a>
-              <a href="#">About</a>
-            </div>
+      <div class="col-5 left-footer">
+        <a>© 2020 GitHub, Inc</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+        <a href="#">Status</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col-1 github-footer-icon">
+      </div>
+      <div class="col-5 right-footer">
+        <a href="#">Contact GitHub</a>
+        <a href="#">Pricing</a>
+        <a href="#">API</a>
+        <a href="#">Training</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+      </div>
     </footer>
 
-<script id="bioTemplate" type="text/x-handlebars-template">
-  {{#bioInfo}}
-    <aside class="col-2" id="bio">
-      <div class="row">
-        <div class="col image">{{avatar}}</div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col username">
-          <h1>{{name}}</h1>
-          <h2>{{login}}</h2>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col edit-profile">
-          <button type="button">Edit profile</button>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col location">{{location}}</div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col orgs">
-          <h3>{{organizations_url}}</h3>
-        </div>
-      </div>
-    </aside>
-{{/bioInfo}}
-</script>
+    <script id="bioTemplate" type="text/x-handlebars-template">
+      {{#bioInfo}}
+        <aside class="col-2" id="bio">
+          <div class="row">
+            <div class="col image">{{avatar}}</div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col username">
+              <h1>{{name}}</h1>
+              <h2>{{login}}</h2>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col edit-profile">
+              <button type="button">Edit profile</button>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col location">{{location}}</div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col orgs">
+              <h3>{{organizations_url}}</h3>
+            </div>
+          </div>
+        </aside>
+      {{/bioInfo}}
+    </script>
 
 
 
@@ -148,7 +168,7 @@
 
 
 
-</div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js">
   </script>

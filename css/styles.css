@@ -85,13 +85,13 @@ img {
 #body #bio .location {
   border-bottom: thin solid #D2D5DA;
 }
-#body #main a {
+#body #main .repo-nav a {
   margin-left: 10px;
   margin-right: 10px;
   color: grey;
   text-decoration: none;
 }
-#body #main a:hover {
+#body #main .repo-nav a:hover {
   color: black;
   font-weight: 400;
 }
@@ -112,6 +112,26 @@ img {
 }
 #body #main .search-bar span {
   font-weight: normal;
+}
+#body #main #repoList {
+  padding: 24px 0;
+  border-bottom: thin solid #D2D5DA;
+}
+#body #main #repoList span {
+  font-size: 12px;
+  color: #D2D5DA;
+  margin: 0;
+}
+#body #main #repoList button {
+  font-size: 14px;
+  float: right;
+}
+#body #main #repoList h3 a {
+  color: #0366d6;
+  font-size: 20px;
+}
+#body #main #repoList .commit-stat {
+  float: right;
 }
 
 #footer {
