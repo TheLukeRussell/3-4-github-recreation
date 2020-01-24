@@ -11,6 +11,10 @@ img {
   padding: 0;
 }
 
+div.col.header-nav {
+  margin-left: 15px;
+}
+
 #header {
   height: 5%;
   padding: 15px;
@@ -20,6 +24,9 @@ img {
   color: white;
   font-size: 30px;
 }
+#header img {
+  width: 7%;
+}
 #header .header-right i {
   font-size: 16px;
   text-align: right;
@@ -28,9 +35,9 @@ img {
   text-align: right;
 }
 #header #search {
-  width: 95%;
+  width: 100%;
   margin: 0;
-  float: right;
+  margin-left: 10px;
 }
 #header input {
   border-radius: 4px;
@@ -38,11 +45,10 @@ img {
   border: none;
 }
 #header a {
-  margin-left: 20px;
-  margin-right: 5px;
+  margin-left: 10px;
   color: white;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
 }
 #header a:hover {
   color: #9E9FA2;
@@ -104,8 +110,8 @@ img {
   padding: 16px 8px;
 }
 #body #main .repo-nav a {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0px;
+  margin-right: 30px;
   color: grey;
   text-decoration: none;
 }
@@ -114,24 +120,29 @@ img {
   font-weight: 400;
 }
 #body #main input {
-  width: 100%;
+  width: 98%;
+  opacity: 0.5;
   border-radius: 4px;
-  border: thin solid #D2D5DA;
+  border: thin solid darkgrey;
   padding: 5px;
+  font-size: 14px;
+  float: left;
 }
 #body #main .repo-nav {
   padding: 16px 8px;
+  font-size: 15px;
   border-bottom: thin solid #D2D5DA;
 }
 #body #main .search-bar {
-  padding: 16px 8px;
-  padding-left: 0px;
+  padding: 16px 0px;
   text-align: center;
   border-bottom: thin solid #D2D5DA;
 }
 #body #main .search-bar button {
-  width: 100%;
+  font-size: 14px;
+  width: 90%;
   padding: 5px;
+  text-align: center;
 }
 #body #main .search-bar span {
   font-weight: normal;
@@ -164,6 +175,13 @@ img {
 }
 #footer a {
   font-size: 10px;
+}
+#footer a i {
+  color: #C7CBD1;
+  font-size: 28px;
+}
+#footer a i:hover {
+  color: grey;
 }
 #footer a:not(:last-child) {
   padding-left: 15px;
