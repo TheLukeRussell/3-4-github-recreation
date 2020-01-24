@@ -35,10 +35,11 @@
   </header>
   <div class="container">
     <section class="row no-gutters" id="body">
-      <aside class="col-2" id="bio">
+      <aside class="col-3" id="bio">
         <div class="row no-gutters">
           <div class="col-12 image">
-            <img src="https://avatars2.githubusercontent.com/u/56741182?s=460&v=4" </div> </div> <div class="row no-gutters">
+            <img src="https://avatars2.githubusercontent.com/u/56741182?s=460&v=4"></div>
+            <div class="row no-gutters">
             <div class="col-12 username">
               <h1>Luke Russell</h1>
               <h2>TheLukeRussell</h2>
@@ -49,14 +50,15 @@
               <button type="button">Edit profile</button>
             </div>
           </div>
-          <div class="row no-gutters">
-            <div class="col location">Greenville, SC</div>
+          <div class="row no-gutters location">
+            <div class="col-12">Greenville, SC</div>
           </div>
-          <div class="row no-gutters">
+          <div class="row no-gutters orgs">
             <div class="col-12 orgs-list">
-              <h3>Organizatons</h3>
+              <h4>Organizatons</h4>
             </div>
           </div>
+        </div>
       </aside>
       <main class="col-9" id="main">
         <div class="row no-gutters">
@@ -90,7 +92,7 @@
             <div><span class="repo-lang-color">'color'</span>
               <span class="repo-lang">'language'</span>
               <span class="update-time">Updated
-                <relative-time datetime="2020-01-25T20:13:45Z" title="Jan 25, 2020, 1:45 PM EST">an hour ago</relative-time></span>
+                <relative-time datetime="2020-01-25T20:13:45Z" title="Jan 25, 2020, 1:45 PM EST">65 years ago</relative-time></span>
             </div>
           </div>
           <div class="col-2">
@@ -130,13 +132,14 @@
         <a href="#">About</a>
       </div>
     </footer>
+    </div>
 
     <script id="bioTemplate" type="text/x-handlebars-template">
-      {{#bioInfo}}
-        <aside class="col-2" id="bio">
-          <div class="row">
-            <div class="col image">{{avatar}}</div>
+          <div class="row no-gutters">
+            <div class="col image">
+              <img src="{{avatar}}"></div>
           </div>
+        </div>
           <div class="row no-gutters">
             <div class="col username">
               <h1>{{name}}</h1>
@@ -149,15 +152,9 @@
             </div>
           </div>
           <div class="row no-gutters">
-            <div class="col location">{{location}}</div>
+            <div class="col location"><i class="fas fa-map-marker-alt"></i><span>{{location}}</span></div>
           </div>
-          <div class="row no-gutters">
-            <div class="col orgs">
-              <h3>{{organizations_url}}</h3>
-            </div>
-          </div>
-        </aside>
-      {{/bioInfo}}
+
     </script>
 
 
@@ -168,7 +165,6 @@
 
 
 
-  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js">
   </script>

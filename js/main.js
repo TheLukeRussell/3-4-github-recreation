@@ -9,7 +9,7 @@ $(document).ready(function() {
   // console.log(GITHUB_API_KEY);
 
   $.ajax({
-    url: `https://api.github.com/users/thelukerussell?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
+      url: `https://api.github.com/users/thelukerussell?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
     })
     .done((resp) => {
       // updateOrgs(resp);
@@ -21,24 +21,23 @@ $(document).ready(function() {
       // console.log('always fires');
     });
 
-    let updateOrgs = (orgs) => {
-      // console.log(orgs.login)
-    }
+  let updateOrgs = (orgs) => {
+    // console.log(orgs.login)
+  }
 
-  $.ajax('https://api.github.com/users/thelukerussell').done((user) => {
-    // console.log(info);
-    let bioInfo = {
-      avatar: user.avatar_url,
-      login: user.login,
-      location: user.location,
-      name: user.name,
-      updated_at: user.updated_at,
-      organizatons_url: user.organizatons_url
-    }
-    console.log(bioInfo);
-    displayBio(bioInfo);
-
-  });
+  $.ajax('https://api.github.com/users/thelukerussell')
+    .done((resp) => {
+      // console.log(info);
+      let bioInfo = {
+        avatar: resp.avatar_url,
+        login: resp.login,
+        location: resp.location,
+        name: resp.name,
+        updated_at: resp.updated_at,
+      }
+      // console.log(bioInfo);
+      displayBio(bioInfo);
+    });
 
   let displayBio = (bioInfo) => {
     let source = $('#bioTemplate').html();
@@ -51,20 +50,20 @@ $(document).ready(function() {
     displayRepos(repoList);
   })
 
-let displayRepos = (repoList) => {
-  let source = $('repo-template').html();
-  let template = Handlebars.compile(source);
+  let displayRepos = (repoList) => {
+    let source = $('repo-template').html();
+    let template = Handlebars.compile(source);
 
 
-  $('#repoList').html(template(repo));
-};
+    $('#repoList').html(template({repos: repoList}));
+  };
 
-let displayOrgs = (orgInfo) => {
-  let source = $('org-temp').html();
-  let template = Handlebars.compile(source);
+  let displayOrgs = (orgInfo) => {
+    let source = $('org-temp').html();
+    let template = Handlebars.compile(source);
 
-  $('#org-list').html(template(repo));
-}
+    $('#org-list').html(template(repoList));
+  }
 
 
   // let context = {
@@ -77,7 +76,6 @@ let displayOrgs = (orgInfo) => {
   // $ {
   //   '#bio'
   // }.html(template(context)); //'bio' is left bio col ID
-
 
 
 });

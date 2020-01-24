@@ -61,6 +61,7 @@ img {
   background-color: #EFF3F6;
   background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
   font-weight: 600;
+  outline: none;
   cursor: pointer;
 }
 #body button:hover {
@@ -72,18 +73,35 @@ img {
   background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
 }
 #body #bio {
-  padding: 16px 8px;
-  margin-right: 0;
+  padding-right: 40px;
+  margin: 0;
+}
+#body #bio .row {
+  padding: 10px 0px;
 }
 #body #bio h2 {
-  font-weight: 200;
-  color: grey;
+  font-weight: 300;
+  font-size: 20px;
+  color: #666666;
+  line-height: 5pt;
 }
-#body #bio h3 {
+#body #bio button {
+  width: 100%;
+}
+#body #bio h1 {
+  font-size: 28px;
+}
+#body #bio i {
+  margin-right: 5px;
+}
+#body #bio h4 {
   font-size: 16px;
 }
-#body #bio .location {
-  border-bottom: thin solid #D2D5DA;
+#body #bio .orgs {
+  border-top: thin solid #D2D5DA;
+}
+#body #main {
+  padding: 16px 8px;
 }
 #body #main .repo-nav a {
   margin-left: 10px;
@@ -96,7 +114,7 @@ img {
   font-weight: 400;
 }
 #body #main input {
-  width: 95%;
+  width: 100%;
   border-radius: 4px;
   border: thin solid #D2D5DA;
   padding: 5px;
@@ -107,8 +125,13 @@ img {
 }
 #body #main .search-bar {
   padding: 16px 8px;
+  padding-left: 0px;
   text-align: center;
   border-bottom: thin solid #D2D5DA;
+}
+#body #main .search-bar button {
+  width: 100%;
+  padding: 5px;
 }
 #body #main .search-bar span {
   font-weight: normal;
