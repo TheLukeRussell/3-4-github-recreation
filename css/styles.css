@@ -11,7 +11,12 @@ img {
   padding: 0;
 }
 
+.container {
+  min-width: 1200px;
+}
+
 #header {
+  min-width: 1600px;
   padding: 15px;
   background-color: #25292E;
 }
