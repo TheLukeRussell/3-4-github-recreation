@@ -54,7 +54,7 @@
           <div class="row no-gutters location">
             <div class="col-12">Greenville, SC</div>
           </div>
-          <div id="orgs-list"class="row no-gutters">
+          <div id="orgs-list" class="row no-gutters">
             <div class="col-12">
               <img src="" alt="">
             </div>
@@ -169,12 +169,31 @@
         <div class="col-10">
           <div class="row no-gutters">
             <div class="col-12">
-              <h3><a href="#">{{name}}</a></h3>
+              <h3><a href="{{html_url}}">{{name}}</a></h3>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <div><span class="repo-lang-color"></span>
+              <div>
+                <div class="row">
+                  <div class="col-12">
+                    {{#if fork}}
+                      <span>Forked from<a href="#"> {{full_name}}</a></span>
+                    {{/if}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    {{#if description}}
+                      <span id="description">{{description}}</span>
+                    {{/if}}
+                  </div>
+                </div>
+            {{#if language}}
+          <span class="repo-lang-color"></span>
+            {{/if}}
+        </span>
+                </span>
                 <span class="repo-lang">{{language}}</span>
                 <span class="update-time">Updated
                   <relative-time datetime="{{updated_at}}" title=>{{updated_at}}</relative-time></span>
@@ -201,11 +220,11 @@
 
   <script id="org-temp" type="text/x-handlebars-template">
     {{#orgs}}
-    <div id="orgs-list" class="row no-gutters">
-      <div class="col-12">
-        <a href="#"><img src="{{avatar_url}}"></a>
+      <div id="orgs-list" class="row no-gutters">
+        <div class="col-12">
+          <a href="#"><img src="{{avatar_url}}"></a>
+        </div>
       </div>
-    </div>
     {{/orgs}}
   </script>
 
@@ -217,8 +236,8 @@
 
 
 
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js">
-</script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.min.js">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">

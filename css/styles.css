@@ -113,7 +113,7 @@ img {
   padding: 16px 8px;
 }
 #body #main .repo-nav a {
-  color: grey;
+  color: #666C73;
   text-decoration: none;
   margin-right: 25px;
   font-weight: 350;
@@ -124,9 +124,8 @@ img {
 }
 #body #main input {
   width: 98%;
-  opacity: 0.5;
   border-radius: 4px;
-  border: thin solid darkgrey;
+  border: thin solid #D2D5DA;
   padding: 5px;
   font-size: 14px;
   float: left;
@@ -161,8 +160,28 @@ img {
 }
 #body #main #repo-list span {
   font-size: 12px;
-  color: #D2D5DA;
+  color: #666C73;
   margin: 0;
+}
+#body #main #repo-list span a {
+  color: #666C73;
+}
+#body #main #repo-list span a:hover {
+  color: #0366d6;
+  text-decoration: none;
+}
+#body #main #repo-list span#description {
+  font-size: 14px;
+}
+#body #main #repo-list .repo-lang-color {
+  position: relative;
+  color: black;
+  background-color: #e44b23;
+  top: 1px;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
 }
 #body #main #repo-list button {
   font-size: 14px;

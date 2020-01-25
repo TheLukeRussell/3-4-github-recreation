@@ -46,6 +46,7 @@ $(document).ready(function() {
 $.ajax(`https://api.github.com/users/thelukerussell/repos?
 client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
 .done((resp) => {
+
     // console.log(resp);
     displayRepos(resp);
   })
@@ -54,7 +55,10 @@ client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
     let source = $('#repo-template').html();
     let template = Handlebars.compile(source);
     $('#repo-list').html(template({repos: reposData}));
+
+
   };
+
 
   // orgs **********************************************
   $.ajax(`https://api.github.com/users/thelukerussell/orgs?
