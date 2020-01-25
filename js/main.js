@@ -8,9 +8,8 @@ $(document).ready(function() {
   // const GITHUB_API_KEY = '775e45a998307284b1a9616dc6004bb1bffdea8f'
   // console.log(GITHUB_API_KEY);
 
-  $.ajax({
-      url: `https://api.github.com/users/thelukerussell?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`,
-    })
+  $.ajax(`https://api.github.com/users/thelukerussell?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+
     .done((resp) => {
       // updateOrgs(resp);
     })
@@ -21,10 +20,7 @@ $(document).ready(function() {
       // console.log('always fires');
     });
 
-  let updateOrgs = (orgs) => {
-    // console.log(orgs.login)
-  }
-
+// profile bio *************************************
   $.ajax('https://api.github.com/users/thelukerussell')
     .done((resp) => {
       // console.log(info);
@@ -45,24 +41,33 @@ $(document).ready(function() {
     $('#bio').html(template(bioInfo));
   };
 
-  $.ajax('https://api.github.com/users/thelukerussell/repos').done((data) => {
-    console.log(data);
-    displayRepos(repoList);
+// repos ********************************************
+
+$.ajax(`https://api.github.com/users/thelukerussell/repos?
+client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+.done((resp) => {
+    // console.log(resp);
+    displayRepos(resp);
   })
 
-  let displayRepos = (repoList) => {
-    let source = $('repo-template').html();
+  let displayRepos = (reposData) => {
+    let source = $('#repo-template').html();
     let template = Handlebars.compile(source);
-
-
-    $('#repoList').html(template({repos: repoList}));
+    $('#repo-list').html(template({repos: reposData}));
   };
 
-  let displayOrgs = (orgInfo) => {
-    let source = $('org-temp').html();
+  // orgs **********************************************
+  $.ajax(`https://api.github.com/users/thelukerussell/orgs?
+  client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  .done((resp) => {
+      // console.log(resp);
+      displayOrgs(resp);
+    })
+  let displayOrgs = (orgsData) => {
+    let source = $('#org-temp').html();
     let template = Handlebars.compile(source);
 
-    $('#org-list').html(template(repoList));
+    $('#orgs-list').html(template({orgs: orgsData}));
   }
 
 

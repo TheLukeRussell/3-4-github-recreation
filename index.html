@@ -40,7 +40,7 @@
         <div class="row no-gutters">
           <div class="col-12 image">
             <img src="https://avatars2.githubusercontent.com/u/56741182?s=460&v=4"></div>
-            <div class="row no-gutters">
+          <div class="row no-gutters">
             <div class="col-12 username">
               <h1>Luke Russell</h1>
               <h2>TheLukeRussell</h2>
@@ -54,9 +54,9 @@
           <div class="row no-gutters location">
             <div class="col-12">Greenville, SC</div>
           </div>
-          <div class="row no-gutters orgs">
-            <div class="col-12 orgs-list">
-              <h4>Organizatons</h4>
+          <div id="orgs-list"class="row no-gutters">
+            <div class="col-12">
+              <img src="" alt="">
             </div>
           </div>
         </div>
@@ -82,13 +82,13 @@
           </div>
           <div class="col-2 language-button">
             <button type="button"><span>Language:</span> All</button>
-        </div>
+          </div>
           <div class="col-1 new-button">
             <button id="new-button" type="button">New</button>
           </div>
         </div>
-        <div id="repoList" class="row no-gutters">
-          <div class="col-10">
+        <div id="repo-list" class="row no-gutters">
+          <!-- <div class="col-10">
             <h3><a href="#">3-1-function-practice</a></h3>
             <div><span class="repo-lang-color">'color'</span>
               <span class="repo-lang">'language'</span>
@@ -103,13 +103,12 @@
             </div>
             <div class="row no-gutters">
               <div class="col-12">
-            <div class="commit-stat">
-              <span class="stat-bar">commit stat bar</span>
+                <div class="commit-stat">
+                  <span class="stat-bar">commit stat bar</span>
+                </div>
+              </div>
             </div>
-            </div>
-          </div>
-          </div>
-
+          </div> -->
         </div>
       </main>
     </section>
@@ -134,10 +133,10 @@
         <a href="#">About</a>
       </div>
     </footer>
-    </div>
+  </div>
 
-    <script id="bioTemplate" type="text/x-handlebars-template">
-          <div class="row no-gutters">
+  <script id="bioTemplate" type="text/x-handlebars-template">
+    <div class="row no-gutters">
             <div class="col image">
               <img src="{{avatar}}"></div>
           </div>
@@ -156,34 +155,59 @@
           <div class="row no-gutters">
             <div class="col location"><i class="fas fa-map-marker-alt"></i><span>{{location}}</span></div>
           </div>
+          <h4>Organizations</h4>
+          <div id="orgs-list"class="row no-gutters">
+            <div class="col">
+              <a href="#"><img src="{{avatar_url}}"></a>
+            </div>
+          </div>
 
     </script>
-    <script id="repoTemplate" type="text/x-handlebars-template">
-    <div id="repoList" class="row no-gutters">
-      <div class="col-10">
-        <h3><a href="#">{{name}}</a></h3>
-        <div><span class="repo-lang-color">'color'</span>
-          <span class="repo-lang">{{language}}</span>
-          <span class="update-time">Updated
-            <relative-time datetime="{{updated_at}}" title="{{updated_at}}">65 years ago</relative-time></span>
+  <script id="repo-template" type="text/x-handlebars-template">
+    {{#repos}}
+      <div id="repo-list" class="row no-gutters">
+        <div class="col-10">
+          <div class="row no-gutters">
+            <div class="col-12">
+              <h3><a href="#">{{name}}</a></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div><span class="repo-lang-color"></span>
+                <span class="repo-lang">{{language}}</span>
+                <span class="update-time">Updated
+                  <relative-time datetime="{{updated_at}}" title=>{{updated_at}}</relative-time></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="row no-gutters">
+            <div class="col-12">
+              <button type="button"><i class="fas fa-star"></i> Star</button></div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col-12">
+              <div class="commit-stat">
+                <span class="stat-bar">commit stat bar</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-2">
-        <div class="row no-gutters">
-          <div class="col-12">
-            <button type="button"><i class="fas fa-star"></i> Star</button></div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-12">
-        <div class="commit-stat">
-          <span class="stat-bar">commit stat bar</span>
-        </div>
-        </div>
-      </div>
-      </div>
+    {{/repos}}
+  </script>
 
+  <script id="org-temp" type="text/x-handlebars-template">
+    {{#orgs}}
+    <div id="orgs-list" class="row no-gutters">
+      <div class="col-12">
+        <a href="#"><img src="{{avatar_url}}"></a>
+      </div>
     </div>
-    </script>
+    {{/orgs}}
+  </script>
 
 
 
@@ -193,7 +217,8 @@
 
 
 
-
+<script src="https://momentjs.com/downloads/moment-with-locales.min.js">
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.min.js">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">

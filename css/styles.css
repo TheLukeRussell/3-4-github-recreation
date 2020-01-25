@@ -12,7 +12,6 @@ img {
 }
 
 #header {
-  height: 5%;
   padding: 15px;
   background-color: #25292E;
 }
@@ -32,8 +31,7 @@ img {
 }
 #header #search {
   width: 90%;
-  margin: 0;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
 }
 #header input {
   border-radius: 4px;
@@ -55,9 +53,6 @@ img {
   padding: 0;
 }
 
-#body {
-  height: 90%;
-}
 #body button {
   border-radius: 4px;
   background-color: #EFF3F6;
@@ -76,11 +71,20 @@ img {
 }
 #body #bio {
   padding-right: 40px;
-  margin: 0;
-  margin-top: 10px;
+  margin: 10px 0 0;
+}
+#body #bio #orgs-list {
+  height: 45%;
+  width: 45%;
+  padding: 5px 5px 5px 0;
 }
 #body #bio .row {
-  padding: 10px 0px;
+  padding: 10px 0;
+}
+#body #bio .location {
+  font-size: 14px;
+  padding-bottom: 15px;
+  border-bottom: thin solid #D2D5DA;
 }
 #body #bio h2 {
   font-weight: 300;
@@ -90,6 +94,9 @@ img {
 }
 #body #bio button {
   width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 600;
 }
 #body #bio h1 {
   font-size: 28px;
@@ -99,9 +106,8 @@ img {
 }
 #body #bio h4 {
   font-size: 16px;
-}
-#body #bio .orgs {
-  border-top: thin solid #D2D5DA;
+  margin: 0;
+  padding-top: 10px;
 }
 #body #main {
   padding: 16px 8px;
@@ -131,7 +137,7 @@ img {
   border-bottom: thin solid #D2D5DA;
 }
 #body #main .search-bar {
-  padding: 16px 0px;
+  padding: 16px 0;
   text-align: center;
   border-bottom: thin solid #D2D5DA;
 }
@@ -144,30 +150,34 @@ img {
 #body #main .search-bar span {
   font-weight: normal;
 }
-#body #main #repoList {
-  padding: 24px 0;
+#body #main #repo-list {
+  display: block;
   border-bottom: thin solid #D2D5DA;
+  margin: 0;
 }
-#body #main #repoList span {
+#body #main #repo-list div#repo-list.row.no-gutters {
+  display: flex;
+  padding: 24px 0;
+}
+#body #main #repo-list span {
   font-size: 12px;
   color: #D2D5DA;
   margin: 0;
 }
-#body #main #repoList button {
+#body #main #repo-list button {
   font-size: 14px;
   float: right;
 }
-#body #main #repoList h3 a {
+#body #main #repo-list h3 a {
   color: #0366d6;
   font-size: 20px;
 }
-#body #main #repoList .commit-stat {
+#body #main #repo-list .commit-stat {
   float: right;
 }
 
 #footer {
-  height: 5%;
-  padding: 40px 0px;
+  padding: 40px 0;
   text-align: center;
 }
 #footer a i {
