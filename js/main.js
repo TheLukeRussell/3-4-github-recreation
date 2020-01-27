@@ -2,13 +2,10 @@ $(document).ready(function() {
 
   const BASE_URL = 'https://api.github.com/users';
   const USER = 'thetukerussell';
-  const CLIENT_ID = 'ac4982b5e60293a2e5c1'
-  const CLIENT_SECRET = 'bbd445fe98af3d6d4c283efa15d1e48ac3d954f3'
 
-  // const GITHUB_API_KEY = '775e45a998307284b1a9616dc6004bb1bffdea8f'
-  // console.log(GITHUB_API_KEY);
 
-  $.ajax(`https://api.github.com/users/thelukerussell?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  // $.ajax(`https://api.github.com/users/thelukerussell?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  $.ajax('https://api.github.com/users/thelukerussell')
 
     .done((resp) => {
       // updateOrgs(resp);
@@ -42,9 +39,10 @@ $(document).ready(function() {
   };
 
   // repos ********************************************
+$.ajax('https://api.github.com/users/thelukerussell/repos')
+//   $.ajax(`https://api.github.com/users/thelukerussell/repos?
+// client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
 
-  $.ajax(`https://api.github.com/users/thelukerussell/repos?
-client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
     .done((resp) => {
 
       // console.log(resp);
@@ -58,6 +56,7 @@ client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
 
   let displayRepos = (reposData) => {
     let source = $('#repo-template').html();
+
     let template = Handlebars.compile(source);
     $('#repo-list').html(template({
       repos: reposData
@@ -67,8 +66,9 @@ client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
 
 
   // orgs **********************************************
-  $.ajax(`https://api.github.com/users/thelukerussell/orgs?
-  client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  // $.ajax(`https://api.github.com/users/thelukerussell/orgs?
+  // client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+  $.ajax('https://api.github.com/users/thelukerussell/orgs')
     .done((resp) => {
       // console.log(resp);
       displayOrgs(resp);

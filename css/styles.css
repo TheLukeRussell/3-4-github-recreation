@@ -121,12 +121,22 @@ img {
   text-decoration: none;
   font-weight: 350;
   margin-right: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 16px 10px;
+  border-bottom: 2pt solid transparent;
+}
+#body #main .repo-nav a.repos {
+  border-bottom: solid 1.5pt #e36209;
+  color: black;
+  font-weight: 500;
+}
+#body #main .repo-nav a.repos:hover {
+  border-bottom: solid 1.5pt #e36209;
+  font-weight: 500;
 }
 #body #main .repo-nav a:hover {
   color: black;
   font-weight: 400;
+  border-bottom: solid 1.5pt #D2D5DA;
 }
 #body #main input {
   width: 98%;
@@ -137,13 +147,12 @@ img {
   float: left;
 }
 #body #main .repo-nav {
-  padding: 16px 0px;
+  border-bottom: thin solid #D2D5DA;
   font-size: 15px;
 }
 #body #main .search-bar {
   padding: 16px 0;
   text-align: center;
-  border-top: thin solid #D2D5DA;
   border-bottom: thin solid #D2D5DA;
 }
 #body #main .search-bar button {

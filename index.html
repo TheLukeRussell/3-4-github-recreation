@@ -64,7 +64,7 @@
       <main class="col-9" id="main">
         <div class="row no-gutters repo-nav">
             <a href="#">Overview</a>
-            <a href="#">Repositories</a>
+            <a class="repos" href="#">Repositories</a>
             <a href="#">Projects</a>
             <a href="#">Packages</a>
             <a href="#">Stars</a>
@@ -191,8 +191,6 @@
             {{#if language}}
           <span class="repo-lang-color"></span>
             {{/if}}
-        </span>
-                </span>
                 <span class="repo-lang">{{language}}</span>
                 <span class="update-time">Updated
                   <relative-time datetime="{{updated_at}}">{{formatDate updated_at}} ago</relative-time></span>
