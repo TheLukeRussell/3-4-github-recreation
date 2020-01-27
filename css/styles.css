@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 img {
@@ -120,8 +119,10 @@ img {
 #body #main .repo-nav a {
   color: #666C73;
   text-decoration: none;
-  margin-right: 25px;
   font-weight: 350;
+  margin-right: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 #body #main .repo-nav a:hover {
   color: black;
@@ -136,13 +137,13 @@ img {
   float: left;
 }
 #body #main .repo-nav {
-  padding: 16px 8px;
+  padding: 16px 0px;
   font-size: 15px;
-  border-bottom: thin solid #D2D5DA;
 }
 #body #main .search-bar {
   padding: 16px 0;
   text-align: center;
+  border-top: thin solid #D2D5DA;
   border-bottom: thin solid #D2D5DA;
 }
 #body #main .search-bar button {
@@ -207,14 +208,16 @@ img {
 #footer a i {
   color: #C7CBD1;
   font-size: 28px;
+  padding-left: 95px !important;
+  padding-right: 95px !important;
 }
 #footer a i:hover {
   color: grey;
 }
 #footer a {
   font-size: 12px;
-  padding-left: 15px;
-  padding-right: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */

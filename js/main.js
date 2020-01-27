@@ -20,7 +20,7 @@ $(document).ready(function() {
       // console.log('always fires');
     });
 
-// profile bio *************************************
+  // profile bio *************************************
   $.ajax('https://api.github.com/users/thelukerussell')
     .done((resp) => {
       // console.log(info);
@@ -41,21 +41,27 @@ $(document).ready(function() {
     $('#bio').html(template(bioInfo));
   };
 
-// repos ********************************************
+  // repos ********************************************
 
-$.ajax(`https://api.github.com/users/thelukerussell/repos?
+  $.ajax(`https://api.github.com/users/thelukerussell/repos?
 client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
-.done((resp) => {
+    .done((resp) => {
 
-    // console.log(resp);
-    displayRepos(resp);
-  })
+      // console.log(resp);
+      Handlebars.registerHelper('formatDate', function(date) {
+        return new Handlebars.SafeString(
+          moment(date).fromNow("MMM D").toLowerCase()
+        );
+      });
+      displayRepos(resp);
+    })
 
   let displayRepos = (reposData) => {
     let source = $('#repo-template').html();
     let template = Handlebars.compile(source);
-    $('#repo-list').html(template({repos: reposData}));
-
+    $('#repo-list').html(template({
+      repos: reposData
+    }));
 
   };
 
@@ -63,7 +69,7 @@ client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
   // orgs **********************************************
   $.ajax(`https://api.github.com/users/thelukerussell/orgs?
   client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
-  .done((resp) => {
+    .done((resp) => {
       // console.log(resp);
       displayOrgs(resp);
     })
@@ -71,7 +77,9 @@ client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
     let source = $('#org-temp').html();
     let template = Handlebars.compile(source);
 
-    $('#orgs-list').html(template({orgs: orgsData}));
+    $('#orgs-list').html(template({
+      orgs: orgsData
+    }));
   }
 
 
