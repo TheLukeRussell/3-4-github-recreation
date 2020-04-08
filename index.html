@@ -62,7 +62,7 @@
         </div>
       </aside>
       <main class="col-9" id="main">
-        <div class="row no-gutters repo-nav">
+        <div id="nav" class="row no-gutters repo-nav">
             <a href="#">Overview</a>
             <a class="repos" href="#">Repositories</a>
             <a href="#">Projects</a>
@@ -113,20 +113,20 @@
     <footer class="row no-gutters" id="footer">
       <div class="col-12 footer">
         <a>© 2020 GitHub, Inc</a>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-        <a href="#">Security</a>
-        <a href="#">Status</a>
-        <a href="#">Help</a>
-        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/site/terms">Terms</a>
+        <a href="https://github.com/site/privacy">Privacy</a>
+        <a href="https://github.com/security">Security</a>
+        <a href="https://githubstatus.com/">Status</a>
+        <a href="https://help.github.com/">Help</a>
+        <a href="https://github.com/"><i class="fab fa-github"></i></a>
 
 
-        <a href="#">Contact GitHub</a>
-        <a href="#">Pricing</a>
-        <a href="#">API</a>
-        <a href="#">Training</a>
-        <a href="#">Blog</a>
-        <a href="#">About</a>
+        <a href="https://github.com/contact">Contact GitHub</a>
+        <a href="https://github.com/pricing">Pricing</a>
+        <a href="https://developer.github.com/">API</a>
+        <a href="https://training.github.com/">Training</a>
+        <a href="https://github.blog/">Blog</a>
+        <a href="https://github.com/about">About</a>
       </div>
     </footer>
   </div>
@@ -134,34 +134,47 @@
 
   <!-- script tags ******************************** -->
 
-  <script id="bioTemplate" type="text/x-handlebars-template">
-    <div class="row no-gutters">
-            <div class="col image">
-              <img src="{{avatar}}"></div>
-          </div>
-        </div>
-          <div class="row no-gutters">
-            <div class="col username">
-              <h1>{{name}}</h1>
-              <h2>{{login}}</h2>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col edit-profile">
-              <button type="button">Edit profile</button>
-            </div>
-          </div>
-          <div class="row no-gutters">
-            <div class="col location"><i class="fas fa-map-marker-alt"></i><span>{{location}}</span></div>
-          </div>
-          <h4>Organizations</h4>
-          <div id="orgs-list"class="row no-gutters">
-            <div class="col">
-              <a href="#"><img src="{{avatar_url}}"></a>
-            </div>
+  <script id="navTemplate" type="text/x-handlebars-template">
+    <div class="row no-gutters navigate">
+      <a href="#">Overview</a>
+      <a class="repos" href="#">Repositories <div>{{repos}}</div></a>
+      <a href="#">Projects <div>0</div></a>
+      <a href="#">Packages <div>0</div></a>
+      <a href="#">Stars <div>0</div></a>
+      <a href="#">Followers <div>{{followers}}</div></a>
+      <a href="#">Following <div>{{following}}</div></a>
           </div>
 
     </script>
+
+    <script id="bioTemplate" type="text/x-handlebars-template">
+      <div class="row no-gutters">
+              <div class="col image">
+                <img src="{{avatar}}"></div>
+            </div>
+          </div>
+            <div class="row no-gutters">
+              <div class="col username">
+                <h1>{{name}}</h1>
+                <h2>{{login}}</h2>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col edit-profile">
+                <button type="button">Edit profile</button>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col location"><i class="fas fa-map-marker-alt"></i><span>{{location}}</span></div>
+            </div>
+            <h4>Organizations</h4>
+            <div id="orgs-list"class="row no-gutters">
+              <div class="col">
+                <a href="#"><img src="{{avatar_url}}"></a>
+              </div>
+            </div>
+  
+      </script>
   <script id="repo-template" type="text/x-handlebars-template">
     {{#repos}}
       <div id="repo-list" class="row no-gutters">
