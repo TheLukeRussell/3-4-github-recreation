@@ -26,6 +26,7 @@ $(document).ready(function () {
         location: resp.location,
         name: resp.name,
         updated_at: resp.updated_at,
+        blog: resp.blog,
       };
       // console.log(bioInfo);
       displayBio(bioInfo);
